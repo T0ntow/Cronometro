@@ -11,7 +11,7 @@ window.onload = function(){
 
 
     var buttonStart = document.getElementById("button-start");
-    var buttonStop = document.getElementById("button-stop");
+    var buttonStop = document.getElementById("button_stop");
     var buttonReset = document.getElementById("button-reset");
     var interval;
 
@@ -20,12 +20,11 @@ window.onload = function(){
         interval = setInterval(starTimer, 10);
     }
 
-
     document.addEventListener("keypress", function(e){
         var press = e.which || e.keyCode || 0;
         
         if(press == 32){
-        const btn = document.querySelector("#button-stop");
+        const btn = document.querySelector("#button_stop");
 
         btn.click();
         }     
@@ -54,7 +53,6 @@ window.onload = function(){
         clearInterval(interval);
     }
 
-   
     buttonReset.onclick = function(){
         
         clearInterval(interval);
@@ -121,5 +119,4 @@ window.onload = function(){
         }
     }
 
-    
 }

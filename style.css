@@ -17,7 +17,6 @@ body {
 }
   
 .wrapper {
-    width: 800px;
     margin: auto;
     color:#fff;
     text-align:center;
@@ -107,6 +106,8 @@ h1{
     color: #4775fd;
 }
 .container-button{
+    margin: auto;
+    width: 70vw;
     display: flex;
     justify-content: space-around;
     
@@ -174,4 +175,46 @@ h1{
 }
 .itens:hover::before{   
     height: 375%;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 880px) {
+    .container-button{
+        width: 85vw;
+    }
+    .container-button a{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #container-timer{
+        width: 85vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .headerMyP{
+        justify-content: center;
+    }
+    .headerMyP span{
+        display: none;
+    }
+    #container-timer{
+        width: 90vw;  
+    }
+    #container-timer span{
+        font-size: 65px;
+    }
+    .container-button{
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-button a{
+        margin: 20px 0;
+    }
+    .wrapper{
+        transform: translateY(10%);
+    }
 }
